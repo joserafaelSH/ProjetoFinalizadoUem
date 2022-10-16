@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<properties>
+		<graphics key="autolayoutconstraints" value="false"/>
+		<graphics key="legendautolayout" value="true"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="horizontal"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="1"/>
+	</properties>
+	<struct>
+		<and abstract="true" mandatory="true" name="HelloWorld">
+			<graphics key="collapsed" value="false"/>
+			<and mandatory="true" name="Hello">
+				<graphics key="collapsed" value="false"/>
+				<or name="Feature">
+					<feature name="Feature5"/>
+					<feature name="Feature6"/>
+					<feature name="NewFeature"/>
+				</or>
+			</and>
+			<and name="Open">
+				<or name="Feature2">
+					<feature name="Feature7"/>
+					<feature name="Feature8"/>
+				</or>
+			</and>
+			<and mandatory="true" name="Closed">
+				<and name="Feature3">
+					<feature name="Feature9"/>
+					<feature name="Feature10"/>
+				</and>
+			</and>
+			<and abstract="true" name="World">
+				<and name="Feature4">
+					<feature name="Feature11"/>
+				</and>
+			</and>
+			<alt name="NewFeature2">
+				<feature name="NewFeature3"/>
+				<feature name="NewFeature4"/>
+			</alt>
+		</and>
+	</struct>
+</featureModel>

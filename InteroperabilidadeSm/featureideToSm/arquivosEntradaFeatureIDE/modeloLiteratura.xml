@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<properties>
+		<graphics key="autolayoutconstraints" value="false"/>
+		<graphics key="legendautolayout" value="true"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="horizontal"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="1"/>
+	</properties>
+	<struct>
+		<and abstract="true" mandatory="true" name="Mobile Media">
+			<graphics key="collapsed" value="false"/>
+			<or mandatory="true" name="Media Selection">
+				<feature name="Photo"/>
+				<feature name="Music"/>
+				<feature name="Video"/>
+			</or>
+			<and mandatory="true" name="Media Management">
+				<and name="Favourites">
+					<feature mandatory="true" name="Set Favourites"/>
+					<feature mandatory="true" name="View Favourites"/>
+				</and>
+				<feature name="Copy Media"/>
+				<and name="SMS Transfer">
+					<feature name="Receive Photo"/>
+					<feature name="Send Photo"/>
+				</and>
+			</and>
+			<alt mandatory="true" name="Screen Size">
+				<feature name="Screen1"/>
+				<feature name="Screen2"/>
+				<feature name="Screen3"/>
+			</alt>
+		</and>
+	</struct>
+	<constraints>
+		<rule>
+			<description>aaaaa</description>
+			<not>
+				<var>Send Photo</var>
+			</not>
+		</rule>
+	</constraints>
+</featureModel>
